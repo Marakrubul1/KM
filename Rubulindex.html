@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TUFC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      padding-top: 56px;
+      margin: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(204, 0, 0, 0.4)),
+        url('C:/Users/rubul/Downloads/paolo.jpg') center/cover no-repeat;
+      color: white;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .menu-box {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, background-color 0.3s;
+      padding: 20px;
+      cursor: pointer;
+      min-height: 200px;
+      color: #000;
+    }
+
+    .menu-box:hover {
+      transform: scale(1.05);
+      background-color: #e3f2fd;
+    }
+
+    .menu-title {
+      color: #0d6efd;
+      font-weight: bold;
+    }
+
+    .menu-content {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .menu-box.active .menu-content {
+      display: block;
+    }
+
+    .team-list-horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    .team-item {
+      background-color: #f8f9fa;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #000;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .team-item:hover {
+      background-color: #d1e9ff;
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .img-fluid {
+      max-height: 200px;
+      object-fit: contain;
+    }
+
+    a {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Knowledge Portal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#auth">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Section Menu -->
+<section class="section text-center">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Teams -->
+      <div class="col-md-2 menu-box" onclick="toggleMenu(this)">
+        <h5 class="menu-title">Teams</h5>
+        <div class="menu-content">
+          <ul class="list-unstyled">
+            <li>
+              <a data-bs-toggle="collapse" href="#tuslTeams" role="button" aria-expanded="false" aria-controls="tuslTeams"><strong>TUSL</strong></a>
+              <div class="collapse" id="tuslTeams">
+                <div class="team-list-horizontal">
+
+                  <div class="team-item" data-bs-toggle="collapse" data-bs-target="#falconFCimg">Falcon FC</div>
+                  <div class="collapse text-center mt-2" id="falconFCimg">
+                    <img src="C:/Users/rubul/Downloads/Falcon FC.jpeg" alt="Falcon FC" class="img-fluid rounded" />
+                  </div>
+
+                  <div class="team-item" data-bs-toggle="collapse" data-bs-target="#vikingsFCimg">Vikings FC</div>
+                  <div class="collapse text-center mt-2" id="vikingsFCimg">
+                    <img src="C:/Users/rubul/Downloads/Viking FC.jpeg" alt="Vikings FC" class="img-fluid rounded" />
+                  </div>
+
+                  <div class="team-item" data-bs-toggle="collapse" data-bs-target="#breakingBadFCimg">Breaking Bad FC</div>
+                  <div class="collapse text-center mt-2" id="breakingBadFCimg">
+                    <img src="C:/Users/rubul/Downloads/Breaking Bad.jpeg" alt="Breaking Bad FC" class="img-fluid rounded" />
+                  </div>
+
+                  <div class="team-item" data-bs-toggle="collapse" data-bs-target="#strawHatFCimg">Straw Hat FC</div>
+                  <div class="collapse text-center mt-2" id="strawHatFCimg">
+                    <img src="C:/Users/rubul/Downloads/Straw-Hat.jpeg" alt="Straw Hat FC" class="img-fluid rounded" />
+                  </div>
+
+                  <div class="team-item" data-bs-toggle="collapse" data-bs-target="#blueMountainFCimg">Blue Mountain FC</div>
+                  <div class="collapse text-center mt-2" id="blueMountainFCimg">
+                    <img src="C:/Users/rubul/Downloads/BLUe Hil.jpeg" alt="Blue Mountain FC" class="img-fluid rounded" />
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="mt-3">
+              <a data-bs-toggle="collapse" href="#interHostelTeams" role="button" aria-expanded="false" aria-controls="interHostelTeams"><strong>Inter-Hostel</strong></a>
+              <div class="collapse" id="interHostelTeams">
+                <div class="team-list-horizontal">
+                  <div class="team-item">Patkai Mens Hostel</div>
+                  <div class="team-item">Nilachal Mens Hostel</div>
+                  <div class="team-item">Kanchenjunga Mens Hostel</div>
+                  <div class="team-item">Charaideu Mens Hostel</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Champions -->
+      <div class="col-md-2 menu-box" onclick="toggleMenu(this)">
+        <h5 class="menu-title">Champions</h5>
+        <div class="menu-content">
+          <a data-bs-toggle="collapse" href="#championsDetails" role="button" aria-expanded="false" aria-controls="championsDetails"><strong>View Details</strong></a>
+          <div class="collapse mt-2 text-start" id="championsDetails">
+            <p><strong>Inter Hostel 2024 Champion:</strong> Charaideu Mens Hostel dominated the tournament with outstanding teamwork and strategy.</p>
+            <img src="https://via.placeholder.com/150" alt="Champion" class="img-fluid rounded mb-2" />
+            <p><strong>TUSL 2025:</strong> Vikings FC claimed the title with a hard-fought final match.</p>
+            <img src="C:/Users/rubul/OneDrive/Desktop/nn.jpeg" alt="Vikings FC Champion" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Inter Hostel -->
+      <div class="col-md-2 menu-box" onclick="toggleMenu(this)">
+        <h5 class="menu-title">Inter Hostel</h5>
+        <div class="menu-content">
+          <div class="team-list-horizontal">
+            <div class="team-item">Patkai Mens Hostel</div>
+            <div class="team-item">Nilachal Mens Hostel</div>
+            <div class="team-item">Kanchenjunga Mens Hostel</div>
+            <div class="team-item">Charaideu Mens Hostel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- News -->
+      <div class="col-md-2 menu-box" onclick="toggleMenu(this)">
+        <h5 class="menu-title">News</h5>
+        <div class="menu-content">
+          <p>In the recent TUSL final, Vikings FC defeated Breaking Bad FC in a dramatic 2-1 match!</p>
+        </div>
+      </div>
+
+      <!-- Tutorials -->
+      <div class="col-md-2 menu-box" onclick="toggleMenu(this)">
+        <h5 class="menu-title">Tutorials</h5>
+        <div class="menu-content">
+          <a data-bs-toggle="collapse" href="#tutorialVideo" role="button" aria-expanded="false" aria-controls="tutorialVideo"><strong>Watch Video</strong></a>
+          <div class="collapse mt-2" id="tutorialVideo">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/cpIwMZ3cUEc" title="YouTube tutorial" allowfullscreen></iframe>
+            </div>
+            <p class="mt-2 text-start">This tutorial covers the essential steps to navigate and use the Knowledge Portal effectively.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Login Section -->
+<section id="auth" class="section bg-white text-center text-dark">
+  <div class="container">
+    <h2>Login</h2>
+    <form class="mx-auto" style="max-width: 400px;">
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center p-4">
+  &copy; 2025 Knowledge Portal. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function toggleMenu(element) {
+    element.classList.toggle('active');
+  }
+</script>
+</body>
+</html>
